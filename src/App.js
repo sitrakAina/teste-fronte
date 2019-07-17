@@ -7,7 +7,8 @@ import { PrivateRoute } from './components/PrivateRoute.js';
 import {Produit} from './components/Produits/ListProd';
 import {AjoutProduit} from './components/Produits/AjoutProd';
 import {UpdateProd} from './components/Produits/UpdateProd';
-import {StatProd} from './components/Produits/Statistique'
+import {StatProd} from './components/Produits/Statistique';
+import {Home} from './components/Page/Home'
 import './App.css';
 
 class App extends Component {
@@ -20,7 +21,8 @@ class App extends Component {
                     <Route exact path="/Ajout" component={AjoutProduit} />
                     <Route exact path="/Update" component={UpdateProd} />
                     <Route exact path="/stat" component={StatProd} />
-                    <Route exact path="/" component={Login}/>
+                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/login" component={Login}/>
                     <Route exact path ="/signup" component={Signup}/>
                     <PrivateRoute path='/dashboard' component={Dashboard} />
                 </Switch>
